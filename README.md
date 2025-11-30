@@ -40,13 +40,7 @@ npm run dev
 Open the app:
 Visit http://localhost:3000 in your browser.
 
-🧪 Mock Credentials
 
-Since this is a Proof of Concept (PoC), you can log in using any non-empty credentials, or use the default mock user:
-
-Email: user@araadigit.io
-
-Password: any-password
 
 🤝 Contributing
 
