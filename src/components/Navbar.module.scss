@@ -1,0 +1,24 @@
+.navbarWrapper{
+    background-color: black;
+    height: 50px;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    .listWrapper{
+        display: flex;
+        gap: 14px;
+        .listItem{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+
+        }
+        .listItem:hover{
+            color: yellowgreen;
+        }
+    }
+}

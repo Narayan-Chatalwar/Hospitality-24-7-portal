@@ -1,0 +1,131 @@
+$color-primary: #007bff;
+$color-secondary: yellowgreen;
+$color-background: #f8f9fa;
+$color-card-bg: #ffffff;
+$color-text: #343a40;
+$color-light-text: #6c757d;
+
+.bookingPageWrapper {
+    padding: 3rem;
+    background-color: $color-background;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* --- Selection Dropdown Section --- */
+.selectionContainer {
+    background-color: $color-card-bg;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        color: $color-secondary;
+        margin-bottom: 20px;
+    }
+
+    .hospitalSelect {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #ced4da;
+        font-size: 1rem;
+        margin-bottom: 15px;
+        background-color: #fff;
+    }
+
+    p {
+        color: $color-light-text;
+    }
+}
+
+
+/* --- Features Section (When Hospital is Selected) --- */
+.featuresContainer {
+    max-width: 900px;
+    width: 100%;
+
+    .hospitalNameHeader {
+        color: $color-text;
+        font-size: 2rem;
+        margin-bottom: 5px;
+
+        strong {
+            color: $color-primary;
+        }
+    }
+
+    .hospitalAddress {
+        color: $color-light-text;
+        margin-bottom: 30px;
+        font-size: 1rem;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e9ecef;
+    }
+}
+
+.featureCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.featureCard {
+    background-color: $color-card-bg;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    h3 {
+        color: $color-primary;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $color-light-text;
+        min-height: 40px;
+        /* Ensures card height consistency */
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background-color 0.2s;
+    }
+}
+
+.bookButton {
+    background-color: $color-secondary;
+    color: white;
+}
+
+.trackButton {
+    background-color: $color-secondary;
+    color: white;
+}
+
+.recordsButton {
+    background-color: $color-secondary;
+    color: white;
+}

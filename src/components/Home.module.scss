@@ -1,0 +1,356 @@
+$color-primary: #007bff;
+$color-secondary: yellowgreen;
+$color-text: #333;
+$color-subtext: #555;
+$color-background: #f8f9fa;
+$color-white: #fff;
+$color-footer-bg: black;
+$color-footer-text: #f8f9fa;
+$color-testimonial-bg: #e9ecef;
+$font-family: sans-serif;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+
+@mixin centered-text {
+  text-align: center;
+}
+
+.homepageMain {
+  font-family: $font-family;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.sectionDivider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 4rem 2rem;
+  width: calc(100% - 4rem);
+}
+
+.sectionHeading {
+  color: $color-text;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  @include centered-text;
+}
+
+.sectionText {
+  color: $color-subtext;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  @include centered-text;
+  margin-bottom: 2rem;
+}
+
+.headerSection {
+  @include centered-text;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #eee;
+  padding: 2rem 0 1rem 0;
+  margin: 0 auto 3rem auto;
+  // background-image: url('https://t3.ftcdn.net/jpg/02/96/74/64/360_F_296746476_F0wDElEXSb0Rd1tyDnsCBLVBHGAsJm3O.jpg');
+  background-image: url('https://www.yashodahospital.org/assets/images/emergency-photo.webp');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 56vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .headerTitle {
+    color: black;
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 5px 10px;
+  }
+
+  .headerSubtitle {
+    color: black;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    padding: 5px;
+  }
+}
+
+.featureCardsContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 0 2rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
+
+  .featureCard {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    @include centered-text;
+    background-color: $color-white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .cardTitle {
+    color: $color-text;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardText {
+    color: $color-subtext;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+.popularServicesSection {
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+
+  .serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .serviceItem {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    @include centered-text;
+    background-color: $color-white;
+
+    h3 {
+      color: $color-text;
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+    }
+
+    p {
+      color: $color-subtext;
+      font-size: 0.95rem;
+    }
+  }
+
+  .ctaButton {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+.patientTestimonialsSection {
+  background-color: $color-testimonial-bg;
+  padding: 4rem 2rem;
+  margin-bottom: 4rem;
+
+  .testimonialContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
+  }
+
+  .testimonialCard {
+    flex: 1;
+    padding: 2rem;
+    border-left: 5px solid $color-secondary;
+    background-color: $color-white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+
+    p {
+      margin-bottom: 1rem;
+      color: $color-text;
+    }
+
+    footer {
+      font-weight: bold;
+      color: $color-secondary;
+      font-style: normal;
+      text-align: right;
+    }
+  }
+}
+
+
+.healthNewsSection {
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+  .sectionHeading{
+    margin-bottom: 24px;
+  }
+
+  .newsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .newsArticle {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .newsTitle {
+      color: $color-secondary;
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    .newsExcerpt {
+      color: $color-subtext;
+      font-size: 0.9rem;
+    }
+
+    .newsLink {
+      color: $color-secondary;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.whyChooseUsSection {
+  @include centered-text;
+  background-color: $color-background;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin: 0 2rem 3rem 2rem;
+
+  .sectionText {
+    &.emphasis {
+      font-weight: bold;
+      color: $color-text;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.primaryButton {
+  background-color: $color-secondary;
+  color: $color-white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+
+.pageFooter {
+  background-color: $color-footer-bg;
+  color: $color-footer-text;
+  padding-top: 2rem;
+  margin-top: 0;
+
+
+  .footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    border-bottom: 1px solid $color-footer-bg;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .footerBrand {
+    flex: 2;
+
+    h3 {
+      color: $color-white;
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $color-footer-bg, 30%;
+    }
+  }
+
+  .footerLinks {
+    flex: 1;
+
+    h4 {
+      color: $color-secondary;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        a {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .footerLink {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: $color-secondary;
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .footerBottom {
+    @include centered-text;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    color: $color-footer-bg;
+  }
+}
