@@ -2,11 +2,6 @@ Hospital 24/7
 
 Hospital 24/7 is a healthcare platform built to find nearby hospitals and make appointment booking easier. It features a robust analytics dashboard for administrators to track costs, patient volume, and operational efficiency.
 
-🚀 Features
-
-Responsive Design: Fully optimized for desktop, tablet, and mobile using Tailwind CSS.
-
-Modern UI: Clean aesthetic with dark mode support.
 
 🛠️ Tech Stack
 
